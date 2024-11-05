@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>{{ Titulo }}</h1>
+    </div>
+
+    <br>
+    {% for Produtos in ListaProdutos %}
+    <div class="Produto-card">
+        <h2>{{ Produtos[1]}}</h2>
+        {% if Produtos[4] =="pele" %}
+         <img src="../static/imagens/PELE.png">
+        {% endif %}
+        {% if Produtos[4] =="creme para o rosto" %}
+        <img src="../static/imagens/CREME.png">
+        {% endif %}
+        {% if Produtos[4] =="hidratante corporal" %}
+        <img src="../static/imagens/HIDRATANTE.png">
+        {% endif %}
+        {% if Produtos[4] =="maquiagem" %}
+        <img src="../static/imagens/MAQUIAGEM.png">
+        {% endif %}
+        {% if Produtos[4] =="perfume" %}
+        <img src="../static/imagens/PERFUME.png">
+        {% endif %}
+        {% if Produtos[4] =="outro" %}
+        <img src="../static/imagens/OUTRO.png">
+        {% endif %}
+        <p>Data de Validade {{ Produtos[2] }}</p>
+        <p>Marca: {{ Produtos[3] }}</p>
+        <p>Categoria: {{  Produtos[4] }}</p>
+        <p>Quantidade: {{ Produtos[5] }}</p>
+        <p>Preço: {{ Produtos[6] }}</p>
+        <p>Descrição: {{ Produtos[7] }}</p>
+        <p>Tipo: {{ Produtos[8] }}</p>
+        <br>
+    </div>
+{% endfor %}
+    <br>
+    <div class="Produto-card">
+     <a href="/">Voltar</a>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+    <div class="Produto-card">
+      <div class="page-header">
+          <h1>{{ Titulo }}</h1>
+      </div>
+      <form action='/criar' method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="dataValidade">Data de Validade</label>
+            <input type="date" id="dataValidade" name="datavalidade" class="form-control" required>
+          </div>
+             <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria" required>
+              <option value="pele">Pele</option>
+              <option value="creme para o rosto">creme para o rosto</option>
+              <option value="hidratante corporal"> hidratante corporal</option>
+              <option value="maquiagem">maquiagem</option>
+              <option value="perfume">perfume</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantidade">Quantidade</label>
+            <input type="text" id="quantidade" name="quantidade" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="preco">Preço</label>
+            <input type="text" id="preco" name="preco" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" name="descricao" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" required>
+              <option value="pele oleosa">Pele Oleosa</option>
+              <option value="pele seca">Pele Seca</option>
+              <option value="pele mista">Pele Mista</option>
+              <option value="cabelo seco">Cabelo Seco</option>
+              <option value="cabelo oleoso">Cabelo Oleoso</option>
+              <option value="cabelo normal">Cabelo Normal</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <div class="Produto-card">
+     <a href="/">Voltar</a>
+    </div>
+
+</body>
+</html>
